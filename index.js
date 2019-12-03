@@ -21,6 +21,12 @@ $(".city-search").on("click", function(){
         $("#temp").text("Temperature: " + tempF + " °C")
         $("#hum").text("Humidity: " + response.main.humidity + "%")
         $("#wind").text("Wind Speed: " + response.wind.speed + " MPH")
+        
+        var oldCity = $("<button>")
+        oldCity.addClass("oldCitySearch")
+        oldCity.text(response.name)
+        //give oldCitySearch class button functionality
+        $(".search").append(oldCity)
     });
 
 });
